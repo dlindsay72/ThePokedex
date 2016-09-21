@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ThePokedex" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +17,102 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EvB-Ur-p0v">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokedex" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FuB-vi-2cS">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="WEp-Np-3a7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="33"/>
+                                        <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="8kl-PW-sBg"/>
+                                    <constraint firstItem="FuB-vi-2cS" firstAttribute="centerX" secondItem="EvB-Ur-p0v" secondAttribute="centerX" id="Uje-TR-ucW"/>
+                                    <constraint firstItem="FuB-vi-2cS" firstAttribute="centerY" secondItem="EvB-Ur-p0v" secondAttribute="centerY" id="uWb-aF-CBt"/>
+                                </constraints>
+                            </view>
+                            <searchBar contentMode="redraw" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="z1b-IK-vAI">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="0dz-er-bUq"/>
+                                </constraints>
+                                <color key="barTintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pokemonBG" translatesAutoresizingMaskIntoConstraints="NO" id="kpm-II-aQf"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OM4-Kn-7fK">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cwk-Jq-ypO">
+                                    <size key="itemSize" width="105" height="105"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="15n-S0-kiQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="105" height="105"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="105" height="105"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="100" translatesAutoresizingMaskIntoConstraints="NO" id="JzL-9J-62q">
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="80" id="MZW-Al-ZFP"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqr-u8-dM7">
+                                                    <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="12"/>
+                                                    <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="jqr-u8-dM7" firstAttribute="leading" secondItem="15n-S0-kiQ" secondAttribute="leading" id="4Nd-SD-Xs9"/>
+                                            <constraint firstAttribute="trailing" secondItem="jqr-u8-dM7" secondAttribute="trailing" id="7Od-Ec-Szt"/>
+                                            <constraint firstAttribute="trailing" secondItem="JzL-9J-62q" secondAttribute="trailing" id="9nU-8H-xkK"/>
+                                            <constraint firstItem="jqr-u8-dM7" firstAttribute="top" secondItem="JzL-9J-62q" secondAttribute="bottom" id="H2O-js-nwp"/>
+                                            <constraint firstItem="JzL-9J-62q" firstAttribute="leading" secondItem="15n-S0-kiQ" secondAttribute="leading" id="Pf3-5s-yfF"/>
+                                            <constraint firstItem="JzL-9J-62q" firstAttribute="top" secondItem="15n-S0-kiQ" secondAttribute="top" id="ck6-Mj-lTh"/>
+                                            <constraint firstAttribute="bottom" secondItem="jqr-u8-dM7" secondAttribute="bottom" id="ryT-gs-y8C"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="kpm-II-aQf" secondAttribute="trailing" id="3HF-b0-1wG"/>
+                            <constraint firstItem="OM4-Kn-7fK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="9Su-qj-iCL"/>
+                            <constraint firstItem="OM4-Kn-7fK" firstAttribute="top" secondItem="z1b-IK-vAI" secondAttribute="bottom" constant="20" id="ASg-Te-row"/>
+                            <constraint firstItem="kpm-II-aQf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Axz-6J-1JI"/>
+                            <constraint firstAttribute="trailing" secondItem="OM4-Kn-7fK" secondAttribute="trailing" constant="20" id="B2e-FP-6yG"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kpm-II-aQf" secondAttribute="bottom" id="C4i-Pk-FbS"/>
+                            <constraint firstItem="EvB-Ur-p0v" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="EyN-N4-XTX"/>
+                            <constraint firstItem="z1b-IK-vAI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="IFE-pw-q5u"/>
+                            <constraint firstAttribute="trailing" secondItem="EvB-Ur-p0v" secondAttribute="trailing" id="Rzw-12-HFv"/>
+                            <constraint firstItem="z1b-IK-vAI" firstAttribute="top" secondItem="EvB-Ur-p0v" secondAttribute="bottom" id="ZOo-1h-rkM"/>
+                            <constraint firstItem="EvB-Ur-p0v" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="aLs-lI-PFh"/>
+                            <constraint firstAttribute="trailing" secondItem="z1b-IK-vAI" secondAttribute="trailing" id="blY-j7-f5s"/>
+                            <constraint firstItem="kpm-II-aQf" firstAttribute="top" secondItem="z1b-IK-vAI" secondAttribute="bottom" id="kD3-xP-aKF"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OM4-Kn-7fK" secondAttribute="bottom" constant="20" id="zSX-mQ-dPb"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-144.80000000000001" y="40.929535232383813"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="100" width="120" height="120"/>
+        <image name="pokemonBG" width="1920" height="1200"/>
+    </resources>
 </document>

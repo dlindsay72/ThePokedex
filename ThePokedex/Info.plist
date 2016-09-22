@@ -43,6 +43,7 @@
 	</array>
 	<key>UIAppFonts</key>
 	<array>
+		<string>pokemonHollow.ttf</string>
 		<string>pokemon.ttf</string>
 	</array>
 </dict>

@@ -9,12 +9,15 @@
         <array key="pokemon.ttf">
             <string>PokemonSolidNormal</string>
         </array>
+        <array key="pokemonHollow.ttf">
+            <string>PokemonHollowNormal</string>
+        </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--PokedexVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ThePokedex" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="PokedexVC" customModule="ThePokedex" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -129,11 +132,59 @@
                     <connections>
                         <outlet property="collection" destination="OM4-Kn-7fK" id="y7j-hf-o9y"/>
                         <outlet property="searchBar" destination="z1b-IK-vAI" id="2qi-F4-iFw"/>
+                        <segue destination="Wnq-fL-Jn0" kind="show" identifier="PokemonDetailVC" id="aQZ-Qa-jGh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-401" y="-27"/>
+            <point key="canvasLocation" x="-658" y="-182"/>
+        </scene>
+        <!--Pokemon DetailVC-->
+        <scene sceneID="LxV-HV-DKV">
+            <objects>
+                <viewController id="Wnq-fL-Jn0" customClass="PokemonDetailVC" customModule="ThePokedex" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yaj-we-4pc"/>
+                        <viewControllerLayoutGuide type="bottom" id="Oay-zK-Tr6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="neX-Ms-bMN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LSD-el-a5d">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heV-cW-Tmg">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="283" id="kha-Qo-ZWh"/>
+                                            <constraint firstAttribute="height" constant="71" id="q8q-qj-qqR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="PokemonHollowNormal" family="Pokemon Hollow" pointSize="44"/>
+                                        <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="heV-cW-Tmg" firstAttribute="centerY" secondItem="LSD-el-a5d" secondAttribute="centerY" id="1CY-o1-cIl"/>
+                                    <constraint firstAttribute="height" constant="100" id="Ezp-ae-pxm"/>
+                                    <constraint firstItem="heV-cW-Tmg" firstAttribute="centerX" secondItem="LSD-el-a5d" secondAttribute="centerX" id="TRZ-kG-IOn"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LSD-el-a5d" firstAttribute="top" secondItem="neX-Ms-bMN" secondAttribute="top" id="1VR-6e-GBX"/>
+                            <constraint firstAttribute="trailing" secondItem="LSD-el-a5d" secondAttribute="trailing" id="1gE-BC-s7c"/>
+                            <constraint firstItem="LSD-el-a5d" firstAttribute="leading" secondItem="neX-Ms-bMN" secondAttribute="leading" id="TE6-Lv-lAR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameLbl" destination="heV-cW-Tmg" id="oY9-sf-1vE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zeb-0O-frq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="77.599999999999994" y="-204.64767616191907"/>
         </scene>
     </scenes>
     <resources>

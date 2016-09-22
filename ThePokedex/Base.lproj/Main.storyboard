@@ -5,6 +5,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="pokemon.ttf">
+            <string>PokemonSolidNormal</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -24,15 +29,27 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="WEp-Np-3a7"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="33"/>
+                                        <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="33"/>
                                         <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFP-5c-EI9">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="6vt-bL-HET"/>
+                                            <constraint firstAttribute="width" constant="47" id="T6x-o4-9F3"/>
+                                        </constraints>
+                                        <state key="normal" image="music"/>
+                                        <connections>
+                                            <action selector="musicButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ulP-ga-zE3"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="8kl-PW-sBg"/>
                                     <constraint firstItem="FuB-vi-2cS" firstAttribute="centerX" secondItem="EvB-Ur-p0v" secondAttribute="centerX" id="Uje-TR-ucW"/>
+                                    <constraint firstAttribute="trailing" secondItem="KFP-5c-EI9" secondAttribute="trailing" constant="18" id="iMr-Xl-Mfi"/>
+                                    <constraint firstItem="KFP-5c-EI9" firstAttribute="centerY" secondItem="EvB-Ur-p0v" secondAttribute="centerY" id="s1y-Eg-ev8"/>
                                     <constraint firstItem="FuB-vi-2cS" firstAttribute="centerY" secondItem="EvB-Ur-p0v" secondAttribute="centerY" id="uWb-aF-CBt"/>
                                 </constraints>
                             </view>
@@ -68,7 +85,7 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqr-u8-dM7">
                                                     <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="12"/>
+                                                    <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="12"/>
                                                     <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -115,11 +132,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-144.80000000000001" y="40.929535232383813"/>
+            <point key="canvasLocation" x="-631.20000000000005" y="-16.641679160419791"/>
         </scene>
     </scenes>
     <resources>
         <image name="100" width="120" height="120"/>
+        <image name="music" width="100" height="100"/>
         <image name="pokemonBG" width="1920" height="1200"/>
     </resources>
 </document>

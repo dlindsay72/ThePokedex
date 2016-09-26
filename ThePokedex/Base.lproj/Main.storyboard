@@ -169,6 +169,9 @@
                                             <constraint firstAttribute="width" constant="44" id="uZh-Du-055"/>
                                         </constraints>
                                         <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="backBtnPressed:" destination="Wnq-fL-Jn0" eventType="touchUpInside" id="vuE-gT-Y50"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -237,7 +240,7 @@
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="eRs-Jt-nPA">
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Defence:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYf-on-lW8">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Defense:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYf-on-lW8">
                                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                                                 <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -393,7 +396,18 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="attackLbl" destination="zHf-rx-6Sq" id="5nQ-q0-Y1m"/>
+                        <outlet property="currentEvoImg" destination="xfj-gA-4kd" id="gBV-Zd-U8U"/>
+                        <outlet property="defenceLbl" destination="otz-iJ-Q3p" id="fdz-eW-asn"/>
+                        <outlet property="descriptionLbl" destination="cqd-gp-FiD" id="cnv-2a-mSc"/>
+                        <outlet property="evoLbl" destination="BVd-Ty-MoV" id="9Ke-Dv-7iT"/>
+                        <outlet property="heightLbl" destination="hse-pj-GBu" id="dIr-TY-dRS"/>
+                        <outlet property="nameImg" destination="mfu-s0-SbL" id="mLw-x1-0Ua"/>
                         <outlet property="nameLbl" destination="heV-cW-Tmg" id="oY9-sf-1vE"/>
+                        <outlet property="nextEvoImg" destination="KxP-3G-pps" id="0fT-wy-ede"/>
+                        <outlet property="pokedexLbl" destination="ttC-87-Xo1" id="qID-3y-Kyd"/>
+                        <outlet property="typeLbl" destination="vPY-gS-Afz" id="IOx-uq-RfT"/>
+                        <outlet property="weightLbl" destination="Ge6-XZ-uNS" id="gSW-vJ-dtR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zeb-0O-frq" userLabel="First Responder" sceneMemberID="firstResponder"/>
